@@ -1,4 +1,5 @@
 package src.models;
+import java.math.BigDecimal;
 
 
 public class ProductSales {
@@ -6,10 +7,10 @@ public class ProductSales {
     private int saleId;
     private int productId;
     private int quantity;
-    private bigDecimal itemValueUnit;
-    private bigDecimal totalValue;
+    private BigDecimal itemValueUnit;
+    private BigDecimal totalValue;
 
-    public ProductSales(int cartId, int saleId, int quantity, bigDecimal itemValueUnit, bigDecimal totalValue){
+    public ProductSales(int cartId, int saleId, int productId ,int quantity, BigDecimal itemValueUnit, BigDecimal totalValue){
         this.itemId = cartId;
         this.saleId = saleId;
         this.productId = productId;
@@ -50,19 +51,19 @@ public class ProductSales {
         this.quantity = quantity;
     }
 
-    public bigDecimal getItemValueUnit() {
+    public BigDecimal getItemValueUnit() {
         return itemValueUnit;
     }
 
-    public void setItemValueUnit(bigDecimal itemValueUnit) {
+    public void setItemValueUnit(BigDecimal itemValueUnit) {
         this.itemValueUnit = itemValueUnit;
     }
 
-    public bigDecimal getTotalValue() {
+    public BigDecimal getTotalValue() {
         return totalValue;
     }
 
-    public void setTotalValue(bigDecimal totalValue) {
+    public void setTotalValue(BigDecimal totalValue) {
         this.totalValue = totalValue;
     }
 

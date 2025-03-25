@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ProductSalesDAO {
 
-    // Create
+    // 1. Inserir item de venda
     public void addProductSale(ProductSales productSale) {
         String sql = "INSERT INTO product_sales (sale_id, product_id, quantity, item_value_unit, total_value) VALUES (?, ?, ?, ?, ?)";
 
@@ -28,7 +28,7 @@ public class ProductSalesDAO {
         }
     }
 
-    // Read by Sale
+    // 2. Listar itens por venda
     public List<ProductSales> getSalesItems(int saleId) {
         List<ProductSales> items = new ArrayList<>();
         String sql = "SELECT * FROM product_sales WHERE sale_id = ?";
@@ -55,7 +55,7 @@ public class ProductSalesDAO {
         return items;
     }
 
-    // Delete
+    // 3. Remover item de venda
     public void deleteProductSale(int itemId) {
         String sql = "DELETE FROM product_sales WHERE item_id = ?";
 

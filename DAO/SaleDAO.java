@@ -9,7 +9,7 @@ import java.util.List;
 
 public class SaleDAO {
 
-    // Create
+    // 1. Inserir venda
     public void addSale(Sale sale) {
         String sql = "INSERT INTO sales (client_id, employee_id, sale_date, total_value) VALUES (?, ?, ?, ?)";
 
@@ -33,7 +33,7 @@ public class SaleDAO {
         }
     }
 
-    // Read All
+    // 2. Listar todas as vendas
     public List<Sale> getAllSales() {
         List<Sale> sales = new ArrayList<>();
         String sql = "SELECT * FROM sales";
@@ -57,22 +57,7 @@ public class SaleDAO {
         return sales;
     }
 
-    // Delete
-    public void deleteSale(int saleId) {
-        String sql = "DELETE FROM sales WHERE id = ?";
-
-        try (Connection conn = connection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            stmt.setInt(1, saleId);
-            stmt.executeUpdate();
-
-        } catch (SQLException e) {
-            throw new RuntimeException("Erro ao excluir venda: " + e.getMessage());
-        }
-    }
-
-    // Get Sales by Client
+    // 3. Listar vendas por cliente
     public List<Sale> getSalesByClient(int clientId) {
         List<Sale> sales = new ArrayList<>();
         String sql = "SELECT * FROM sales WHERE client_id = ?";

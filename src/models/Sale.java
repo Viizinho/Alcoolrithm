@@ -7,9 +7,9 @@ public class Sale {
     private int clientID;
     private int employeeID;
     private Timestamp saleDate;
-    private bigDecimal totalValue;
+    private BigDecimal totalValue;
 
-    public  Sale(int saleID, int clientID, int employeeID, Timestamp saleDate, bigDecimal totalValue){
+    public  Sale(int saleID, int clientID, int employeeID, Timestamp saleDate, BigDecimal totalValue){
         this.saleID = saleID;
         this.clientID = clientID;
         this.employeeID = employeeID;
@@ -49,11 +49,11 @@ public class Sale {
         this.saleDate = saleDate;
     }
 
-    public bigDecimal getTotalValue() {
+    public BigDecimal getTotalValue() {
         return totalValue;
     }
 
-    public void setTotalValue(bigDecimal totalValue) {
+    public void setTotalValue(BigDecimal totalValue) {
         this.totalValue = totalValue;
     }
 
