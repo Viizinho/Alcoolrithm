@@ -1,82 +1,71 @@
-import java.time.LocalDateTime;
-import java.util.List;
-import src.models.ProductSales;
+package src.models;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 public class Sale {
-    private int idVenda;
-    private int idCliente;
-    private int idFuncionario;
-    private LocalDateTime dataVenda;
-    private double valorTotal;
-    private List<ProductSales> itensVenda; // Lista de produtos vendidos na venda
+    private int saleID;
+    private int clientID;
+    private int employeeID;
+    private Timestamp saleDate;
+    private bigDecimal totalValue;
 
-    public Sale(int idVenda, int idCliente, int idFuncionario, LocalDateTime dataVenda, double valorTotal) {
-        this.idVenda = idVenda;
-        this.idCliente = idCliente;
-        this.idFuncionario = idFuncionario;
-        this.dataVenda = dataVenda;
-        this.valorTotal = valorTotal;
+    public  Sale(int saleID, int clientID, int employeeID, Timestamp saleDate, bigDecimal totalValue){
+        this.saleID = saleID;
+        this.clientID = clientID;
+        this.employeeID = employeeID;
+        this.saleDate = saleDate;
+        this.totalValue = totalValue;
     }
 
-    // Getters e Setters
-    public int getIdVenda() {
-        return idVenda;
+    public int getSaleID() {
+        return saleID;
     }
 
-    public void setIdVenda(int idVenda) {
-        this.idVenda = idVenda;
+    public void setSaleID(int saleID) {
+        this.saleID = saleID;
     }
 
-    public int getIdCliente() {
-        return idCliente;
+    public int getClientID() {
+        return clientID;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setClientID(int clientID) {
+        this.clientID = clientID;
     }
 
-    public int getIdFuncionario() {
-        return idFuncionario;
+    public int getEmployeeID() {
+        return employeeID;
     }
 
-    public void setIdFuncionario(int idFuncionario) {
-        this.idFuncionario = idFuncionario;
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
     }
 
-    public LocalDateTime getDataVenda() {
-        return dataVenda;
+    public Timestamp getSaleDate() {
+        return saleDate;
     }
 
-    public void setDataVenda(LocalDateTime dataVenda) {
-        this.dataVenda = dataVenda;
+    public void setSaleDate(Timestamp saleDate) {
+        this.saleDate = saleDate;
     }
 
-    public double getValorTotal() {
-        return valorTotal;
+    public bigDecimal getTotalValue() {
+        return totalValue;
     }
 
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setTotalValue(bigDecimal totalValue) {
+        this.totalValue = totalValue;
     }
 
-    public List<ProductSales> getItensVenda() {
-        return itensVenda;
-    }
-
-    public void setItensVenda(List<ProductSales> itensVenda) {
-        this.itensVenda = itensVenda;
-    }
-
-    // Método para exibir detalhes da venda
-    public void exibirDetalhes() {
-        System.out.println("ID Venda: " + idVenda);
-        System.out.println("Cliente: " + idCliente);
-        System.out.println("Funcionário: " + idFuncionario);
-        System.out.println("Data: " + dataVenda);
-        System.out.println("Valor Total: R$ " + valorTotal);
-        System.out.println("Produtos Vendidos:");
-        for (ProductSales item : itensVenda) {
-            System.out.println(" - " + item.getNomeProduto() + " | Qnt: " + item.getQuantidade() + " | R$ " + item.getPrecoTotal());
-        }
+    @Override
+    public String toString() {
+        return "Sale{" +
+                "saleID=" + saleID +
+                ", clientID=" + clientID +
+                ", employeeID=" + employeeID +
+                ", saleDate=" + saleDate +
+                ", totalValue=" + totalValue +
+                '}';
     }
 }
+

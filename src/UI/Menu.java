@@ -42,13 +42,13 @@ public class Menu {
                 case 5:
                     relatorios(scanner);
                     break;
-                case 0:
+                case 6:
                     System.out.println("Saindo...");
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
-        } while (opcao != 0);
+        } while (opcao != 6);
 
         scanner.close();
     }

@@ -1,37 +1,37 @@
 package src.models;
 
 public class Product {
-    private int codigo;
-    private String nome;
-    private int quantidade;
-    private double preco;
-    private String categoria;
+    private int productID;
+    private String productName;
+    private int productQuantity;
+    private double productValue;
+    private String productCategory;
 
-    public Product(int codigo, String nome, int quantidade, double preco, String categoria) {
-        this.codigo = codigo;
-        this.nome = nome;
-        this.quantidade = quantidade;
-        this.preco = preco;
-        this.categoria = categoria;
+    public Product(int productID, String productName, int productQuantity, double productValue, String productCategory) {
+        this.productID = productID;
+        this.productName = productName;
+        this.productQuantity = productQuantity;
+        this.productValue = productValue;
+        this.productCategory = productCategory;
     }
 
-    public int getCodigo() { return codigo; }
-    public void setCodigo(int codigo) { this.codigo = codigo; }
+    public int getProductID() { return productID; }
+    public void setProductID(int productID) { this.productID = productID; }
 
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
+    public String getProductName() { return productName; }
+    public void setProductName(String productName) { this.productName = productName; }
 
-    public int getQuantidade() { return quantidade; }
-    public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
+    public int getProductQuantity() { return productQuantity; }
+    public void setProductQuantity(int productQuantity) { this.productQuantity = productQuantity; }
 
-    public double getPreco() { return preco; }
-    public void setPreco(double preco) { this.preco = preco; }
+    public double getProductValue() { return productValue; }
+    public void setProductValue(double productValue) { this.productValue = productValue; }
 
-    public String getCategoria() { return categoria; }
-    public void setCategoria(String categoria) { this.categoria = categoria; }
+    public String getProductCategory() { return productCategory; }
+    public void setProductCategory(String productCategory) { this.productCategory = productCategory; }
 
     @Override
     public String toString() {
-        return "Produto [Código=" + codigo + ", Nome=" + nome + ", Quantidade=" + quantidade + ", Preço=" + preco + ", Categoria=" + categoria + "]";
+        return "Product [Product code=" + productID + ", Product name=" + productName + ", Quantity=" + productQuantity + ", Value=" + productValue + ", Category=" + productCategory + "]";
     }
 }

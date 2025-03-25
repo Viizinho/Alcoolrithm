@@ -1,32 +1,52 @@
 package src.models;
 
 public class Employee {
-    private int id;
-    private String nome;
-    private String cargo;
-    private double salario;
+    private int employeeID; //PK
+    private String employeeName;
+    private String employeeRole;
+    private float salary;
 
-    public Employee(int id, String nome, String cargo, double salario) {
-        this.id = id;
-        this.nome = nome;
-        this.cargo = cargo;
-        this.salario = salario;
+    public Employee(int employeeID, String employeeName, String employeeRole, float salary) {
+        this.employeeID = employeeID;
+        this.employeeName = employeeName;
+        this.employeeRole = employeeRole;
+        this.salary = salary;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getEmployeeID() {
+        return employeeID;
+    }
 
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
 
-    public String getCargo() { return cargo; }
-    public void setCargo(String cargo) { this.cargo = cargo; }
+    public String getEmployeeName() {
+        return employeeName;
+    }
 
-    public double getSalario() { return salario; }
-    public void setSalario(double salario) { this.salario = salario; }
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public String getEmployeeRole() {
+        return employeeRole;
+    }
+
+    public void setEmployeeRole(String employeeRole) {
+        this.employeeRole = employeeRole;
+    }
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(float salary) {
+        this.salary = salary;
+    }
 
     @Override
     public String toString() {
-        return "Funcionário [ID=" + id + ", Nome=" + nome + ", Quantidade=" + ", Cargo=" + cargo + ", Salario=" + salario + "]";
+        return "Employee{employeeID=" + employeeID + ", employeeName=" + employeeName + ", employeeRole=" + employeeRole + ", salary=" + salary + "]";
     }
 }
