@@ -1,6 +1,6 @@
 package DAO;
 
-import resources.connection;
+import javaToSqlConnection.connection;
 import src.models.Client;
 import java.sql.*;
 import java.util.ArrayList;

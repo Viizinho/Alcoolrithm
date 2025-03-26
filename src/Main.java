@@ -12,11 +12,23 @@ import java.sql.Timestamp;
 import java.util.List;
 import src.UI.Menu;
 
-public class Main {
 
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Bard Playlist Generator!");
-        Menu menu = new Menu();
-        menu.showMenu();
+        // Cria instância do DAO
+        ClientDAO clientDAO = new ClientDAO();
+
+        // Cria novo cliente
+        Client novoCliente = new Client(
+                0,                   // ID (0 para auto-increment)
+                "Fulano de Tal",     // Nome
+                "21999998888",       // Telefone
+                "fulano@email.com"   // Email
+        );
+
+        // Insere no banco
+        clientDAO.addClient(novoCliente);
+
+        System.out.println("Cliente inserido com sucesso!");
     }
 }

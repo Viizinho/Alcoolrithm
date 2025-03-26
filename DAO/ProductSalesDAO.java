@@ -1,8 +1,8 @@
 package DAO;
 
-import resources.connection;
+import javaToSqlConnection.connection;
 import src.models.ProductSales;
-import java.math.BigDecimal;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
